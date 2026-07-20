@@ -2,7 +2,7 @@
 <html lang="en" data-theme="{{ theme }}">
 <head>
 <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Reflecto &mdash; {{ user }}</title>
+<title>Reflecto {{ user }}</title>
 <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"/>
 <style>
 .pri{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:.35rem;flex-shrink:0;vertical-align:middle}
@@ -105,7 +105,7 @@
         <div class="stat"><div class="stat-n">{{ st.journal }}</div><div class="stat-l">Journal Entries</div></div>
         <div class="stat"><div class="stat-n">{{ st.notes }}</div><div class="stat-l">Study Notes</div></div>
         <div class="stat"><div class="stat-n">{{ st.pending }}</div><div class="stat-l">Pending Tasks</div></div>
-        <div class="stat"><div class="stat-n">{{ st.mood }}</div><div class="stat-l">Today's Mood</div></div>
+        <div class="stat"><div class="stat-n">{{ st.mood }}</div><div class="stat-l">Today's Mood</div></div> 
       </div>
       <div class="card">
         <div style="font-size:.88rem;font-weight:500;margin-bottom:.6rem">&#x1F4AD; Quick Thought &rarr; Journal</div>
@@ -329,6 +329,7 @@
           <button class="timer-btn" onclick="swPause()">&#x23F8; Pause</button>
           <button class="timer-btn" onclick="swLap()">&#x1F3C1; Lap</button>
           <button class="timer-btn danger" onclick="swReset()">&#x21BA; Reset</button>
+          <button class="timer-btn" onclick="test()">&#x1F4A1; Test</button>
         </div>
         <ul id="lapList" style="list-style:none;margin-top:.75rem;max-height:180px;overflow-y:auto"></ul>
       </div>
