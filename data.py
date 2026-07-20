@@ -1,7 +1,14 @@
 import os, json, re
 from datetime import datetime
 
-DATA_DIR = os.path.join(os.path.dirname(__file__), "data")
+if os.environ.get("VERCEL"):
+    # Vercel's serverless filesystem is read-only except /tmp.
+    # Note: /tmp is ephemeral and not shared across instances, so data
+    # will NOT persist reliably in production on Vercel. Use a real
+    # database (Vercel Postgres/KV, etc.) for persistent storage.
+    DATA_DIR = "/tmp/reflecto_data"
+else:
+    DATA_DIR = os.path.join(os.path.dirname(__file__), "data")
 
 def _default_data(theme: str = "light") -> dict:
     
