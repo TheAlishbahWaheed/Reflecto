@@ -43,7 +43,19 @@
 .btn-submit{font-family:inherit;width:100%;padding:.76rem;background:var(--accent);color:#fff;border:none;border-radius:10px;font-size:.9rem;font-weight:600;cursor:pointer;transition:transform .15s,opacity .2s;box-shadow:0 3px 12px var(--accent-glow)}
 .btn-submit:hover{opacity:.91;transform:translateY(-1px)}
 .privacy-note{text-align:center;margin-top:1.1rem;font-size:.69rem;color:var(--muted);opacity:.65}
-@media(max-width:760px)
+@media(max-width:760px){
+  .page-wrap{grid-template-columns:1fr;min-height:auto}
+  .left-panel{padding:2rem 1.5rem;order:2}
+  .feature-list{margin:1.5rem 0;gap:.9rem}
+  .right-panel{padding:2rem 1.25rem;min-height:auto;order:1}
+  .login-card{padding:1.75rem 1.5rem}
+}
+@media(max-width:420px){
+  .brand-logo h1{font-size:1.7rem}
+  .login-card{padding:1.4rem 1.1rem;border-radius:16px}
+  .card-header h2{font-size:1.35rem}
+  .prev-user-btn{padding:.55rem .7rem}
+}
 </style>
 </head>
 <body>
