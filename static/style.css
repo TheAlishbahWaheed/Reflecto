@@ -415,11 +415,38 @@ details.n-form summary::-webkit-details-marker { display: none; }
 .phase-dot.current { background: var(--accent); }
 
 @media (max-width: 760px) { .j-layout, .t-cols, .cf-row { grid-template-columns: 1fr; } }
+@media (max-width: 900px) {
+  .info-grid, .about-grid { grid-template-columns: repeat(auto-fit,minmax(160px,1fr)); }
+}
 @media (max-width: 600px) {
   .sidebar { position: fixed; left: -245px; top: 0; bottom: 0; z-index: 50; transition: left .3s; }
   .hamburger { display: block; }
   .page   { padding: 1.1rem 1rem; }
-  .topbar { padding: .75rem 1rem; }
+  .topbar { padding: .75rem 1rem; flex-wrap: wrap; gap: .5rem; }
+  .topbar h2 { font-size: 1.05rem; }
+  .stats { grid-template-columns: repeat(2,1fr); }
+  .info-grid, .about-grid { grid-template-columns: 1fr; }
+  .land-title { font-size: 2.3rem; }
+  .land-card { padding: 1.5rem 1.4rem; }
+  .timer-page { padding: 1.1rem 1rem; }
+  .timer-display { font-size: 3.2rem; }
+  .timer-display.large { font-size: 3.6rem; }
+  .timer-tabs { justify-content: center; }
+  .note-modal { width: 100vw; max-height: 100vh; height: 100vh; border-radius: 0; }
+  .note-modal-body textarea { min-height: 220px; }
+  .contact-form-wrap { padding: 1.1rem; }
+  .n-form, .t-add { padding: .9rem; }
+  .btn, .btn-a, .btn-s { padding: .55rem 1rem; }
+  .t-add-row input, .t-add-row select { flex: 1 1 100%; min-width: 0; }
+}
+@media (max-width: 420px) {
+  .stats { grid-template-columns: 1fr 1fr; }
+  .timer-display { font-size: 2.5rem; }
+  .timer-display.large { font-size: 2.8rem; }
+  .timer-input-row input[type=number] { width: 70px; }
+}
+@media (max-width: 600px) {
+  .sidebar { width: min(245px, 82vw); left: min(-245px, -82vw); }
 }
 @media print {
   .sidebar, .topbar, .btn, .btn-a, .btn-s, .btn-d,
