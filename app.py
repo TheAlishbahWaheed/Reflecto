@@ -24,7 +24,7 @@ THEMES = {
     "light": "☀️ Light",      "dark": "🌑 Dark",
     "brown": "🍂 Brown",      "brown-dark": "🌰 Brown Dark",
     "blue": "🌊 Blue",        "blue-dark": "🌌 Blue Dark",
-    "green": "🌿 Green",      "green-dark": "🌲 Green Dark",
+    "green": "🌿 Green",      "green-dark": "🌲 Gr een Dark",
     "purple": "💜 Purple",    "purple-dark": "🌙 Purple Dark",
     "pink": "🌸 Pink",        "pink-dark": "🌷 Pink Dark",
 }
@@ -514,4 +514,4 @@ def task_clear(user, data):
 
 
 if __name__ == "__main__":
-    app.run(debug=True, port=5000)
+    app.run(host="0.0.0.0", port=5000, debug=True)
